@@ -78,6 +78,7 @@ DAX (Data Analysis Expressions): For calculated columns, measures, and data tran
 Power Query Editor: To load, clean, and transform data from raw sources.
 
 **Future Improvements**
+
 Implement predictive analytics for customer purchasing trends.
 
 Automate data updates and dashboard refresh to include real-time insights.
