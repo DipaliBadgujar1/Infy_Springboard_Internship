@@ -1,0 +1,98 @@
+Sales is the table name
+
+Total sale:Total Sales= SUM(Sales[SalesAmount])
+
+
+total cost: SUM(Sale[costAmount])
+
+Gross profit:Gross profit =[Totalsale] - [Total cost]
+
+Gross profit margin: Gross Profit Margin=
+DIVIDE([Grossprofit],[Total Sales])
+
+AverageOrder Vale:
+Average Order value=AVERAGEX(Sales,Sales[SalesAmount])
+
+Sales Growth Percentage:
+Sales Growth %=DIVIDE ([Total Sales] - [Previous Year Sales] , [Previous YearSales])
+
+Cumulative Gross profit
+Cumulative Gross Profit = CALCULATE ([Gross Profit],FILTER(All(Sales[Date]),Sales[Date] <=Max(Sales[Date]))
+
+Profit year to Date:
+Profit YTD=TOTALYTD([Gross Profit],Sales[Date])
+
+Sales Month to Date:
+Sales MTD=TOTALMTD([Total Sales],Sales[Date])
+
+Customer Count:
+Customer Count = DISTINCTCOUNT(Sales[customerID])
+
+New Customer:
+New Customer = CALCULATE(DISTINCTCOUNT(Sales[customerID]),FILTER (Sales,sales[date] >=MIN(Sales[Date] && sales[Date] <=MAX(Sales[Date])))
+
+Return Customer:
+Returing Customer = CALCULATE([Customer Count],FILTER(Sales,Sales[OrderCount] >1))
+
+Sales Per Customer:
+Sales per Customer =DIVIDE[Total Sales],[Customer Count])
+
+Top 10 Customer by Sale:
+
+Top 10 Customer by Sales = TOPN(10,VALUES(Sales[CustomerID],[TotalSales])
+
+Sales by product category:
+Sales by category =SUMMARIZE(Sales,Sales[ProductCategory],"Total Sales",[Total Sales])
+
+Sales By Channel:
+Sales by channel = SUMMARIZE(Sales,[SalesChannel],"Total Sales",[Total Sales])
+
+Top Product Sale:
+Top Products by Sale = TOPN(10,VALUES[Sales[ProductID],[Total Sales])
+
+Average Discount Given:
+Average Discount = AVERAGEX(Sales,Sales[DiscountAmount])
+
+Sales per product:
+Sales per product=CALCULATE([Total Sales],ALLEXCEPT(Sales,Sales[ProductID])
+
+Total Units sold
+Total Units Sold=SUM(Sales[Quantity])
+
+Sales by Month
+Sales by MONTH=SUMMARIZE(Sales,FORMAT(Sales[Date],"YYYY-MM"),"Total Sales",[Total Sales])
+
+Sales by Week
+Sales by week = WEEKNUM(Sales[Date]])
+
+Sale by week of Day
+Sales by Day of week = FORMAT(Sales[Date],"days")
+
+Sales OverTime
+Sales Trend = SUMMARIZE(Sales,Sales[Date],"Total Sales",[Total Sales])
+
+Sales Percentage by Product
+
+Sales % by Product =DIVIDE[Total Sales],CALCULATE([Total Sales],ALL(Sales[ProductID])))
+
+Profit Percentage
+
+Profit Percentage =DIVIDE([Gross Profit],[Total Sales])
+
+Sales vs Budget
+Sales vs Budget =[Total Sales]- [Budget Sales])
+
+Profit Target
+Profit Target Achievement = DIVIDE[Gross Profit],[Profit Target])
+
+
+Customer lifetime Value
+Customer LifeTime Value = CALCULATE(SUM(Sales[SalesAmount]),ALL(Sales,Sales[CustomerID])
+
+Net Profit:
+Net Profit =[Gross Profit] - SUM(Sales[Expenses])
+
+
+
+
+
