@@ -1,0 +1,21 @@
+Task 1-Analysis of the Requirements regarding the project.
+
+Task2- Collecting a Dataset individually
+
+Task 3-Working with the Dataset using DAX Formulas-
+  1)Project :Sales Data Extract it with PowerBI? 
+  2)Data Source ->Import Raw Dataset eg:CSV File/datadase) ->Sales order,Customer Information and product details. 
+  3)load: PowerQuery to import data 
+  4)Combine and merge the source into singledata set 
+  5)Transform->Any maniplication 
+  6)Apply Tranformation logic->Filter. Use merge append queries(JOIN) Eg:Sales order and product Category. 
+    DAX: Create CALCULATE COLUMN using DAX eg:Total Sale = [Quantity ] * [Price]) 
+    Intelligence DAX Function: SAMEPERIODLASTYEAR() to calculate year-over-year sales growth. 
+    Create measure using DAX eg:Average Order Value =[Toal Sales] / [Order Count].
+
+Task4: Customer Segmentation using DAX Data Transformation? 
+Data Source:Import a customer Sales dataset which includes customerID,CustomerName,Transaction Dates,Sales amount and product categories. 
+Tranform: load customer transaction Create new columns in power Query editor. 
+DAX: Create measures using DAX to calculate total spending per customer(Total spend = SUM([Sales Amount])). 
+Use Ranking Function (Customer Rank=RANKX(ALL(CustomerTable),[Total Spend])) 
+Segment customers DAX Calculation eg: Customer Expense =IF((Total Customer ] > 3800,''Platinum',IF[Total Spend] >1000,''Gold","Silver")).
