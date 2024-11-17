@@ -84,3 +84,45 @@ Implement predictive analytics for customer purchasing trends.
 Automate data updates and dashboard refresh to include real-time insights.
 
 Expand customer segmentation criteria for targeted marketing insights.
+
+
+
+Milestone 2: 
+ Module 2: Basic Visualizations
+
+Objective: Create fundamental visualizations to represent sales data.
+
+Tasks:
+
+Create a clustered column chart to compare sales across different regions.
+
+Use a line chart to show sales trends over time.
+
+Create a pie chart to represent the sales distribution across product categories.
+
+ Module 3: Advanced Sales Analysis
+
+Objective: Use advanced features to analyze sales performance.
+
+Tasks:
+Create a measure to calculate Sales Growth Rate using DAX.
+
+Implement a waterfall chart to analyze the contribution of each region to overall sales.
+
+Add slicers to filter data by region, product category, and time period.
+
+Milestone 4: 
+
+Module 4: Final Dashboard and Presentation
+
+Objective: Compile all visualizations into a final dashboard.
+
+Tasks:
+Arrange visuals on the dashboard to create a cohesive view of sales performance.
+
+Add interactive elements such as tooltips and bookmarks to guide users through the analysis.
+
+Prepare a presentation to explain insights derived from the dashboard, focusing on key sales trends and actionable recommendations.
+
+
+
